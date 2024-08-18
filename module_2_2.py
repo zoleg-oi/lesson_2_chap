@@ -1,11 +1,51 @@
 # Условная конструкция. Операторы if, elif, else.
+import sys
+# Проверим правильность ввода
+n = 0
+while n <= 10:
+    try:
+        first = input('Введите первое число: ')
+        int_first = int(first)
+        break
+    except:
+        print('Это не число, введите число')
+        n += 1
+        if n == 3:
+            print('Вы использовали все свои попытки ввода первого ЧИСЛА')
+            sys.exit()
 
-first = int(input('Введите первое число: '))
-second = int(input('Введите второе число: '))
-third = int(input('Введите третье число: '))
+
+while n <= 10:
+    try:
+        second = input('Введите второе число: ')
+        int_first = int(second)
+        break
+    except:
+        print('Это не число, введите число')
+        n += 1
+        if n == 3:
+            print('Вы использовали все свои попытки ввода вторго ЧИСЛА')
+            sys.exit()
+n = 0
+while n <= 10:
+    try:
+        third = input('Введите третье число: ')
+        int_first = int(third)
+        break
+    except:
+        print('Это не число, введите число')
+        n += 1
+        if n == 3:
+            print('Вы использовали все свои попытки ввода третьего ЧИСЛА')
+            sys.exit()
+
+
 
 print('Первый вариант выполнения задачи')
 print()
+
+
+
 
 if first == second == third:
     print(3)
@@ -46,7 +86,7 @@ print()
 print('Третий вариант выполнения задачи')
 print()
 set_input = set()
-set_input.update(str(first), str(second), str(third))
+set_input.update(first, second, third)
 if len(set_input) == 1:
     print(3)
 elif len(set_input) == 2:
