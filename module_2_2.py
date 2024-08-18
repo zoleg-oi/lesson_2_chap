@@ -46,7 +46,7 @@ print()
 print('Третий вариант выполнения задачи')
 print()
 set_input = set()
-set_input.update(str(first),str(second),str(third))
+set_input.update(str(first), str(second), str(third))
 if len(set_input) == 1:
     print(3)
 elif len(set_input) == 2:
