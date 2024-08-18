@@ -1,44 +1,63 @@
 # Условная конструкция. Операторы if, elif, else.
+
 import sys
 
-# Проверим правильность ввода
-n = 0
-while n <= 10:
+# Прграмма ограничевает сравнение только типом integer
+def input_user(input_int):# Определяем правильность ввода
     try:
-        first = input('Введите первое число: ')
-        int_first = int(first)
-        break
+        int_input_int = int(input_int)
+        return 1
     except:
-        print('Это не число, введите число')
+        return 0
+# end input_user
+
+
+
+max_in = 3 # Максимальное значение неверных вводов
+
+n = 0
+while n <= max_in:
+    first = input('Введите первое целое число: ')
+    res = input_user(first)
+    if res == 1:
+        break
+    else:
         n += 1
-        if n == 3:
-            print('Вы использовали все свои попытки ввода первого ЧИСЛА')
+        print('Введите целое число, осталось попыток - ' + str(max_in - n))
+        if n == max_in:
+            print('Вы ввели максимальное значение неверных значений')
             sys.exit()
 
-while n <= 10:
-    try:
-        second = input('Введите второе число: ')
-        int_first = int(second)
-        break
-    except:
-        print('Это не число, введите число')
-        n += 1
-        if n == 3:
-            print('Вы использовали все свои попытки ввода вторго ЧИСЛА')
-            sys.exit()
 n = 0
-while n <= 10:
-    try:
-        third = input('Введите третье число: ')
-        int_first = int(third)
+while n <= max_in:
+    second = input('Введите первое целое число: ')
+    res = input_user(second)
+    if res == 1:
         break
-    except:
-        print('Это не число, введите число')
+    else:
         n += 1
-        if n == 3:
-            print('Вы использовали все свои попытки ввода третьего ЧИСЛА')
+        print('Введите целое число, осталось попыток - ' + str(max_in - n))
+        if n == max_in:
+            print('Вы ввели максимальное значение неверных значений')
             sys.exit()
+
+n = 0
+while n <= max_in:
+    third = input('Введите первое целое число: ')
+    res = input_user(third)
+    if res == 1:
+        break
+    else:
+        n += 1
+        print('Введите целое число, осталось попыток - ' + str(max_in - n))
+        if n == max_in:
+            print('Вы ввели максимальное значение неверных значений')
+            sys.exit()
+
+
+
 # Строки тоже можно сравнивать, выше ограничен ввод всего кроме integer
+
 print('Первый вариант выполнения задачи')
 print()
 
