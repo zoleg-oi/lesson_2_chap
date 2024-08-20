@@ -2,17 +2,16 @@
 import random
 
 
-# Функция выдает случайным обпазом число из списка от 3 до 20
 def random_first_value():
+    # Функция выдает случайным обпазом число из списка от 3 до 20
     val_nest = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     return random.choice(val_nest)
 
 
 # конец random_first_value
-
-# Функция служит для вычисления  и
-# передачи списка числел на которые делится без остатка входящее значение
 def remainder_division(num):
+    # Функция служит для вычисления  и
+    # передачи списка числел на которые делится без остатка входящее значение
     num_rem = []
     for ii in range(3, num + 1):
 
@@ -22,8 +21,9 @@ def remainder_division(num):
 
 
 # конец remainder_division
-# Функция служит для вычисления пар в получаемых значениях
+
 def calculating_the_pairs(num):
+    # Функция служит для вычисления пар в получаемых значениях
     pair = []
     len_rd = len(num)
     for r in range(0, len_rd):
@@ -41,6 +41,8 @@ def calculating_the_pairs(num):
     for lp in range(0, len_pair):
         key += str(pair[lp][0]) + str(pair[lp][1])
     return key
+
+
 # Конец calculating_the_pairs
 
 # Получаем случайное число из диапазона
